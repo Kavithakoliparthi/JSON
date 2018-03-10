@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var i = "";
+        //nested JSON
+    var books={
+        "name": "C",
+        "author": "Balaguruswamy",
+        "editions":
+            {
+                "Edition1": "First Edition",
+                "Edition2": "Third Edition",
+                "Edition3":"Fifth Edition"
+            }
+    }
+    for(x in books.editions)
+    {
+       i += books.editions[x] +"<br>"+"<br>";
+    }
+    document.getElementById("demo").innerHTML = i;
+    
+            //delete object proeprties
+    delete books.editions.Edition2;
+    for (x in books.editions)
+    {
+        i += books.editions[x] + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = i;
+     </script>
+</body>
+</html>

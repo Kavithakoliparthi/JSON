@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    
+    <p id="demo"></p>
+    <script>
+        var i,j,x="";
+        var books = {
+            "name": "C",
+            "author": [
+                { "name": "Brian Kernighan", "Edition":[ "Second Edition","Fifth Edition"] },
+                { "name": "Balaguruswamy", "Edition": ["Sixth Edition" ,"SecondEdition"]},
+                {"name":"Herbert Schildt","Edition":["Fourth Edition"]}
+            ]
+        }
+        for (i in books.author)
+        {
+            x += "<h2>" + books.author[i].name + "</h2>";
+            for (j in books.author[i].Edition)
+            {
+                x += books.author[i].Edition[j] + "<br>";
+            }
+        }
+        document.getElementById("demo").innerHTML = x;
+
+    </script>
+</body>
+</html>

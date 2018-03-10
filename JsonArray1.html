@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <p>Accessing Array values</p>
+    <p id="demo"></p>
+    <script>
+        var x = "";
+        var books = {
+            "name": "C",
+            "author": "Balaguruswamy",
+           "editions":["Edition1","Edition3","Edition5"]
+        }
+        
+        for (var i = 0; i < books.editions.length; i++)
+        {
+            x += books.editions[i] +"<br>";
+        }
+        document.getElementById("demo").innerHTML = x +"<br>" + "<br>";
+
+        delete books.editions[1];
+        for (i in books.editions) 
+        {
+            x += books.editions[i] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = x;
+    </script>     
+</body>
+</html>

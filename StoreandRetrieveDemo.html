@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <p id="demo">Store and Retreive data</p>
+    <script>
+        var obj = { "name": "anitha", "city": "Hyderabad" };
+        var obj1 = JSON.stringify(obj);
+            //store data
+        localStorage.setItem("textJson",obj1);
+        //Retreive data
+        var v=localStorage.getItem("textJson");
+        var obj2 = JSON.parse(v);
+//Parse() -->JS has built-in function to convert a string written in JSON format into native object
+        document.getElementById("demo").innerHTML = obj2.name;
+
+        
+    </script>
+</body>
+</html>
+
+
+<!--document.geteleemntbyid() returns the element that has the id attribute with specified value
+    innerHTML can be used to write the dynamic HTML on the HTML document -->

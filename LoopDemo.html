@@ -1,0 +1,40 @@
+﻿    <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <p>Looping all properties in JSON object</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+            //for loop
+        var obj2 =
+            {
+                  "Book-id": "07",
+                  "Book-language": "C++",
+                  "Book-edition": "second",
+                  "Book-author": "E.Balagurusamy"
+             };
+        //object proeprties using for loop
+        for (x in obj2)
+        {
+            document.getElementById("demo").innerHTML += x + "<br>";
+        }
+        document.write("<br>");
+            //Use bracket notation to get property values
+        for(i in obj2)
+        {
+            document.getElementById("demo").innerHTML += obj2[i] + "<br>";
+        }
+            //number, string boolean datatypess
+        var obj1 = { "name": "Amit", "marks": 97, "distinction": true }
+        //document.getElementById("demo1").innerHTML = obj1.marks;
+        for(obj in obj1)
+        {
+            document.getElementById("demo1").innerHTML += obj1[obj] + "<br>"+"<br>"
+        }
+    </script>
+</body>
+</html>
